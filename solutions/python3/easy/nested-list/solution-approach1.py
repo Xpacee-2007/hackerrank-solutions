@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-09-05, 03:39 p.m.
+# Technique   set-sorting-and-list-comprehension
+# Time        O(N log N)
+# Space       O(N)
+# Insight     The implementation identifies the second lowest grade by extracting unique scores into a sorted set and then filters the original list for students matching that specific value.
+# Interview   Before: "How would you find the second lowest value in a list of pairs?" After: "I would use a set to isolate unique scores, sort them to find the second index, and filter the original list. This approach runs in O(N log N) time, which is efficient for N students."
+# Pitfalls    (1) Assuming the second lowest score is always at index 1 without verifying the input contains at least two unique scores.  (2) Failing to sort the final list of names alphabetically before printing, as required by the problem statement.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':

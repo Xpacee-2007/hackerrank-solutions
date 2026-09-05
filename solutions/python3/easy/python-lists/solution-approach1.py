@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-09-05, 03:40 p.m.
+# Technique   command-pattern-dispatch
+# Time        O(N * M) where M is the average cost of…
+# Space       O(M) where M is the number of elements …
+# Insight     The implementation maps string-based command inputs directly to native Python list methods to maintain the list state across sequential operations.
+# Interview   Before: "I would use a series of if-else statements to handle each command type." After: "I used a command-pattern approach to dispatch operations, which handles the O(N) worst-case complexity of list methods like insert or sort efficiently within the given constraints."
+# Pitfalls    (1) Assuming the remove command deletes by index rather than the first occurrence of the value.  (2) Failing to handle the variable number of arguments provided for different commands like insert versus pop.  (3) Neglecting that sort and reverse modify the list in-place rather than returning a new list.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
